@@ -14,6 +14,20 @@
  * four million, find the sum of the even-valued terms.
  */
 
-int main(int argc, char *argv[]) {
+int main(void) {
+    int a = 1;
+    int b = 2;
+    int sum = 0;
+    while (b <= 4000000){
+        if (b % 2 == 0){
+            sum += b;
+
+        }
+        int temp = a + b;
+        a = b;      
+        b = temp;
+    }
+    printf("The sum of the two number is %d\n",sum);
+
     return EXIT_SUCCESS;
 }
